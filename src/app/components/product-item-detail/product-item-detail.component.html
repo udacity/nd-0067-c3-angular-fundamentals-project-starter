@@ -1,0 +1,29 @@
+<div class="detail-container">
+    <img class="img" src="{{ product.url }}" />
+    <div class="detail-item">
+        <h2>{{ product.name }}</h2>
+        <p>${{ product.price }}</p>
+        <p> {{ product.description }}</p>
+        <!-- <select class="select-input" [(ngModel)]='product.quantity' (ngModelChange)='onOptionsSelected($event)' >
+            <option class='option' *ngFor='let quantity of quantities' [value]="selectedQuantity">{{ product.quantity }}</option>
+        </select> -->
+
+        <!-- <select class="form-control" [(ngModel)]="selectedQuantity" (ngModelChange)="changeQuantity($event)">
+            <option *ngFor="let quantity of quantities" [ngValue]="quantity">{{ quantity}}</option>
+        </select> -->
+
+        <select class="select-input" [(ngModel)]='product.quantity' (ngModelChange)="changeQuantity($event)">
+            <option class='option' *ngFor='let quantity of quantities' [value]="quantity">{{ quantity }}</option>
+          </select>
+
+        <div>
+            <button type="button" class="addToCartBtn" (click)="addToCart(product)">Add to cart</button>
+        </div>
+
+        <div class="back-link">
+            <a routerLink="/products">Back to product list</a>
+        </div>
+    </div>
+</div>
+
+

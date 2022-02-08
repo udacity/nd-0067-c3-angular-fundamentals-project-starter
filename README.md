@@ -1,9 +1,7 @@
 # MyStore
-
 MyStore is Angular application that allows users to view a list of available products to purchase, add them to a shopping cart, and ultimately complete the checkout process. 
 
 ## Getting Started
-
 To use these files, simply merge the folders into the root directory of your scaffolded Angular application.
 
 ## Project Instructions
@@ -21,7 +19,6 @@ To showcase your new skills, you'll build an e-commerce website – an applicati
 Many applications that you use daily include the functionality to read, write, update, and delete content provided by APIs. For example, a typical image-sharing social media application may allow you to view photos, add photos, edit them, and remove them from an album or user account. Similar to such applications, this project relies on input from users of the application. After completing this project, you'll solidify your skills in designing and creating interactive CRUD applications in the real world.
 
 #### Before you begin
-
 Throughout the course, you've learned a lot about Angular components, services, modules, services, routing, and data flow. Before you begin scaffolding the application, ask yourself:
 
 * How do I fetch and use data from an external API (or JSON data file)?
@@ -44,7 +41,6 @@ The Angular CLI allows you to quickly scaffold a new application, as well as gen
 If you choose to use the starter code, all files can be downloaded here. To use them, just merge the folders into the root directory of your scaffolded application.
 
 #### Project features
-
 Your application reflects the same user experience as that of a real-world e-commerce website, including a(n):
 
 * **Product list** page, which displays the available products for the user to choose and add to their cart (in various quantities)

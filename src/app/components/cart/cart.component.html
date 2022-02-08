@@ -1,0 +1,40 @@
+<div class="cart-container">
+    <div class="cart-panel" *ngFor="let product of products">
+        <img src={{product.url}}  />
+        <h2> {{ product.name}} </h2>
+        <h2>${{ product.price }}</h2>
+        <h2>Amount:</h2>
+        <input type="number" min="0" max="10" [(ngModel)]='product.quantity' (ngModelChange)='onNumberChanged($event, product)' />
+    </div>
+
+    <div>
+        <h1>Total: ${{ calculateTotal() }}</h1>
+    </div>
+
+    <div class="form-margin">
+        <form class="form" #form="ngForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label>Full name</label>
+                <input type="text" placeholder="(minimum 3 characters)" name="fullName" required minlength="3" [(ngModel)]="fullName"  />
+            </div>
+    
+            <div>
+                <label>Address</label>
+                <input type="text" placeholder="(minimum 6 characters )" name="address" required minlength="6" [(ngModel)]="address"  />
+            </div>
+    
+            <div>
+                <label>Credit Card Number</label>
+                <input type="text" placeholder="(16-digit number)" name="creditCardNumber" required minlength="16" [(ngModel)]="creditCardNumber"  />
+            </div>
+    
+            <div>
+                <label>We'll never share your payment details with anyone else.</label> 
+            </div>
+    
+            <div>
+                <button type="submit" [disabled]="form.invalid">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
